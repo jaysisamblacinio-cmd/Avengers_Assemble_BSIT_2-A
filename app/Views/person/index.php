@@ -38,7 +38,7 @@
                     <th>No.</th>
                     <th style="display:none;">id</th>
                     <th>Name</th>
-                    <th>Birthday</th>
+                    <th>Surname</th>
                     <th>Actions</th>
                   </tr>
                 </thead>
@@ -69,8 +69,8 @@
               </div>
 
               <div class="form-group">
-                <label>Birthday</label>
-                <input type="date" name="bday" class="form-control" required />
+                <label>Surname</label>
+                <input type="text" name="surname" class="form-control" required />
               </div>
           </div>
 
@@ -104,8 +104,8 @@
               </div>
 
             <div class="form-group">
-              <label for="Birthday">Birthday</label>
-              <input type="date" class="form-control" id="bday" name="bday" required>
+              <label for="surname">Surname</label>
+              <input type="text" class="form-control" id="surname" name="surname" required>
             </div>
           </div>
           <div class="modal-footer">

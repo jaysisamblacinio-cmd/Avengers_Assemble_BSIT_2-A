@@ -41,7 +41,7 @@ $(document).on('click', '.edit-btn', function () {
         if (response.data) {
             $('#editUserModal #name').val(response.data.name);
             $('#editUserModal #userId').val(response.data.id);
-            $('#editUserModal #bday').val(response.data.bday);
+            $('#editUserModal #surname').val(response.data.surname);
             $('#editUserModal').modal('show');
         } else {
             alert('Error fetching person data');
@@ -128,7 +128,7 @@ $(document).ready(function () {
         { data: 'row_number' },
         { data: 'id', visible: false },
         { data: 'name' },
-        { data: 'bday' },
+        { data: 'surname' },
         {
             data: null,
             orderable: false,

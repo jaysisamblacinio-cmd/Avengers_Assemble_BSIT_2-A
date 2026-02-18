@@ -17,14 +17,14 @@ class Person extends Controller
 
     public function save(){
         $name = $this->request->getPost('name');
-        $bday = $this->request->getPost('bday');
+        $surname= $this->request->getPost('surname');
 
         $userModel = new \App\Models\PersonModel();
         $logModel = new LogModel();
 
         $data = [
             'name'       => $name,
-            'bday'      => $bday
+            'surname'      => $surname
         ];
 
         if ($userModel->insert($data)) {
@@ -36,21 +36,21 @@ class Person extends Controller
     }
 
     public function update(){
-        $model = new UserModel();
+        $model = new PersonModel();
         $logModel = new LogModel();
         $userId = $this->request->getPost('id');
         $name = $this->request->getPost('name');
-        $bday = $this->request->getPost('bday');
+        $surname = $this->request->getPost('surname');
 
         $userData = [
             'name'       => $name,
-            'bday'      => $bday,
+            'surname'      => $surname,
         ];
 
         $updated = $model->update($userId, $userData);
 
         if ($updated) {
-            $logModel->addLog('New Person has been apdated: ' . $name, 'UPDATED');
+            $logModel->addLog('New Person has been updated: ' . $name, 'UPDATED');
             return $this->response->setJSON([
                 'success' => true,
                 'message' => 'Person updated successfully.'
